@@ -9,8 +9,15 @@
     <title>PHP Strong Password Generator</title>
 </head>
 <body>
+    <main class="container text-center">
+            <h1>Strong Password Generate</h1>
+                <form action="index.php" method="GET">
+                        <label for="passwordLength"> Lunghezza della password:</label>
+                        <input type="number" name="passwordLength" id="passwordLength" min="8" max="25" required>
+                        <button type="submit">Genera Password</button>
+                </form>
 
-  <h1>Strong Password Generate</h1>
+    </main>
 
 </body>
 </html>
