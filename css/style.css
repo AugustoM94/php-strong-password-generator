@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+   
+main {
+    background-color: #001632;
+    padding: 60px;
+}
+h1{
+color: #808B99;
+}
+
+h3 {
+    color: white;
+}
+
+form{
+  background-color: white;
+  padding: 50px;
+}
