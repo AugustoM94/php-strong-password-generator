@@ -48,7 +48,7 @@ function generatePassword() {
 <div class="container d-flex align-items-center justify-content-center vh-100">
     <main class="text-center">
         <h1 class="mb-4">Strong Password Generator</h1>
-            <h3>Genera una password sicura</h3>
+                <h3>Genera una password sicura</h3>
         <form action="index.php" method="GET">
             <label for="passwordLength">Lunghezza della password:</label>
             <input type="number" name="passwordLength" id="passwordLength" min="8" max="25" required>
