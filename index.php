@@ -1,3 +1,28 @@
+<?php
+
+function generatePassword() {
+    
+    $simbols = '!?&%$><^+-\*/(){}@#_-=';
+    $letters = 'abcdefghijklmnopqrstuvwxyz';
+    $upLetters = strtoupper($letters);
+    $numbers = '0123456789';
+
+   if(isset($_GET['passwordLength'])) {
+    $passwordLength = $_GET['passwordLength'];
+    $newPassword = '';
+
+    while(strlen($newPassword) < $passwordLength) {
+           $valoriDisponibili = $simbols. $letters. $upLetters. $numbers;
+           $newChars = $valoriDisponibili[rand(0, strlen($valoriDisponibili) -1)];
+           if (!str_contains($newPassword, $newChars)) {
+                $newPassword .= $newChars;
+      }
+    }
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +41,7 @@
                         <input type="number" name="passwordLength" id="passwordLength" min="8" max="25" required>
                         <button type="submit">Genera Password</button>
                 </form>
-
+                <p>La tua password generata è: $newChars</p>
     </main>
 
 </body>
